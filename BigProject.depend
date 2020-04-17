@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1586691146 source:d:\the son\bigproject\main.cpp
+	<iostream>
+	<SDL.h>
+	"window.h"
+	<SDL_image.h>
+	"Rect.h"
+
+1586434150 d:\the son\bigproject\window.h
+	<iostream>
+	<SDL.h>
+	<string>
+	<SDL_image.h>
+
+1586434777 source:d:\the son\bigproject\window.cpp
+	"window.h"
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1586442321 source:d:\the son\bigproject\rect.cpp
+	"Rect.h"
+	<SDL_image.h>
+	<iostream>
+	<ctime>
+
+1586441489 d:\the son\bigproject\rect.h
+	"window.h"
+	<string>
+
+1586167173 source:d:\the son\bigproject\threatobject.cpp
+	"ThreatObject.h"
+
+1586167173 d:\the son\bigproject\threatobject.h
+
