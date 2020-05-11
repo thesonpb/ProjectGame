@@ -1,30 +1,31 @@
 # depslib dependency file v1.0
-1586691146 source:d:\the son\bigproject\main.cpp
+1589015008 source:d:\the son\bigproject\main.cpp
 	<iostream>
 	<SDL.h>
 	"window.h"
 	<SDL_image.h>
 	"Rect.h"
+	<ctime>
 
-1586434150 d:\the son\bigproject\window.h
+1587542615 d:\the son\bigproject\window.h
 	<iostream>
 	<SDL.h>
 	<string>
 	<SDL_image.h>
 
-1586434777 source:d:\the son\bigproject\window.cpp
+1587543078 source:d:\the son\bigproject\window.cpp
 	"window.h"
 	<iostream>
 	<SDL.h>
 	<SDL_image.h>
 
-1586442321 source:d:\the son\bigproject\rect.cpp
+1589015159 source:d:\the son\bigproject\rect.cpp
 	"Rect.h"
 	<SDL_image.h>
 	<iostream>
 	<ctime>
 
-1586441489 d:\the son\bigproject\rect.h
+1589015024 d:\the son\bigproject\rect.h
 	"window.h"
 	<string>
 
@@ -32,4 +33,39 @@
 	"ThreatObject.h"
 
 1586167173 d:\the son\bigproject\threatobject.h
+
+1589015008 source:d:\the son\bigproject\bin\debug\main.cpp
+	<iostream>
+	<SDL.h>
+	"window.h"
+	<SDL_image.h>
+	"Rect.h"
+	<ctime>
+
+1587542615 d:\the son\bigproject\bin\debug\window.h
+	<iostream>
+	<SDL.h>
+	<string>
+	<SDL_image.h>
+
+1589015024 d:\the son\bigproject\bin\debug\rect.h
+	"window.h"
+	<string>
+
+1589015159 source:d:\the son\bigproject\bin\debug\rect.cpp
+	"Rect.h"
+	<SDL_image.h>
+	<iostream>
+	<ctime>
+
+1586167173 source:d:\the son\bigproject\bin\debug\threatobject.cpp
+	"ThreatObject.h"
+
+1586167173 d:\the son\bigproject\bin\debug\threatobject.h
+
+1587543078 source:d:\the son\bigproject\bin\debug\window.cpp
+	"window.h"
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
 

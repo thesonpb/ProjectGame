@@ -34,8 +34,6 @@
 		</Compiler>
 		<Unit filename="Rect.cpp" />
 		<Unit filename="Rect.h" />
-		<Unit filename="ThreatObject.cpp" />
-		<Unit filename="ThreatObject.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="window.cpp" />
 		<Unit filename="window.h" />

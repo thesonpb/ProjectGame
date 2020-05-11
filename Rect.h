@@ -13,12 +13,13 @@ class Rect
         Rect(int w, int h, int x, int y, const string &image_path);
         ~Rect();
         void draw() const;
-        void pollEvents(SDL_Event &event);
-        void update(bool isFalling) ;
+        void pollEventsCharacter(SDL_Event &event);
+        void update() ;
         bool check_collision(const Rect& B);
         void explode(const Rect &B);
-        void menuEvents(bool play);
+        void menuEvents(SDL_Event &event, bool &is_play);
         bool isFalling = true;
+        int vel = rand() % 5 +2;
     private:
         int _w, _h;
         int _x, _y;

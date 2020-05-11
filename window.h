@@ -27,7 +27,6 @@ class Window{
         int _width = 800;
         int _height = 600;
         bool _closed = false;
-
         SDL_Window* _window = nullptr;
         SDL_Surface* background = nullptr;
         SDL_Surface* screen = nullptr;

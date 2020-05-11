@@ -45,34 +45,34 @@ void Rect::draw() const
     SDL_RenderFillRect(Window::renderer, &rect);
     }
 }
-void Rect::pollEvents(SDL_Event &event)
+void Rect::pollEventsCharacter(SDL_Event &event)
 {
-    if(event.type == SDL_KEYDOWN)
+    if(event.type=SDL_KEYDOWN)
+    {
+        switch(event.key.keysym.sym)
         {
-            switch(event.key.keysym.sym)
-            {
-                case SDLK_LEFT:
-                    _x-=20;
+            case SDLK_LEFT:
+                _x-=10;
                     break;
-                case SDLK_RIGHT:
-                    _x+=20;
-                    break;
-                default:
-                    break;
-            }
+            case SDLK_RIGHT:
+                _x+=10;
+                break;
+            default:
+                break;
         }
+    }
 }
-void Rect::update(bool isFalling)
+void Rect::update()
 {
+
     if(isFalling)
     {
-    //srand(time(0));
-    _y+=1;
-    SDL_Delay(1);
+    _y+=vel;
+    SDL_Delay(3);
     if(_y >= 600)
     {
         _y = 0;
-        _x = rand() % 800 +1;
+        _x = rand() % 800;
     }
     if(_x>=800) _x -= 800;
     }
@@ -108,25 +108,19 @@ void Rect::explode(const Rect & B)
     _y = B._y + B._h - _h;
 }
 
-void Rect::menuEvents(bool play)
+void Rect::menuEvents(SDL_Event &event, bool &is_play)
 {
-    SDL_Event event;
-    if(SDL_PollEvent(&event))
+    if(event.type=SDL_KEYDOWN)
     {
-        if(event.type == SDL_KEYDOWN)
+        switch(event.key.keysym.sym)
         {
-            switch(event.key.keysym.sym)
-            {
-                case SDLK_SPACE:
-                    play = true;
-                    break;
-                case SDLK_ESCAPE:
-                    play = false;
-                    break;
-                default:
-                    break;
-            }
+            case SDLK_SPACE:
+                cout << "space pressed";
+                is_play = true;
+                break;
+            default:
+                break;
         }
     }
-
 }
+
