@@ -19,7 +19,7 @@ class Rect
         void explode(const Rect &B);
         void menuEvents(SDL_Event &event, bool &is_play);
         bool isFalling = true;
-        int vel = rand() % 5 +2;
+        int vel = rand() % 10 +2;
     private:
         int _w, _h;
         int _x, _y;

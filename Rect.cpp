@@ -52,10 +52,10 @@ void Rect::pollEventsCharacter(SDL_Event &event)
         switch(event.key.keysym.sym)
         {
             case SDLK_LEFT:
-                _x-=10;
-                    break;
+                _x-=20;
+                break;
             case SDLK_RIGHT:
-                _x+=10;
+                _x+=20;
                 break;
             default:
                 break;
@@ -67,10 +67,12 @@ void Rect::update()
 
     if(isFalling)
     {
+    if(vel < 5) vel = 5;
     _y+=vel;
     SDL_Delay(3);
     if(_y >= 600)
     {
+
         _y = 0;
         _x = rand() % 800;
     }
@@ -115,8 +117,10 @@ void Rect::menuEvents(SDL_Event &event, bool &is_play)
         switch(event.key.keysym.sym)
         {
             case SDLK_SPACE:
-                cout << "space pressed";
                 is_play = true;
+                break;
+            case SDLK_ESCAPE:
+                is_play = false;
                 break;
             default:
                 break;
