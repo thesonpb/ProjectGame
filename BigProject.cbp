@@ -34,6 +34,8 @@
 		</Compiler>
 		<Unit filename="Rect.cpp" />
 		<Unit filename="Rect.h" />
+		<Unit filename="Text.cpp" />
+		<Unit filename="Text.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="window.cpp" />
 		<Unit filename="window.h" />

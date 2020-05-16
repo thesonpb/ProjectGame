@@ -2,6 +2,7 @@
 #include <iostream>
 #include <SDL.h>
 #include <SDL_image.h>
+#include <SDL_ttf.h>
 
 using namespace std;
 
@@ -18,6 +19,7 @@ Window::~Window()
 {
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(_window);
+    TTF_Quit();
     IMG_Quit();
     SDL_Quit();
 }
@@ -29,9 +31,15 @@ bool Window::init()
         cout << "Failed to initialize SDL \n";
         return false;
     }
-    if(SDL_Init(IMG_INIT_PNG) != 0)
+    if(IMG_Init(IMG_INIT_PNG) != IMG_INIT_PNG)
     {
         cout << "Failed to initialize SDL image.\n";
+        return false;
+    }
+    if(TTF_Init() == -1)
+    {
+        cout << "Failed to initialize SDL ttf" << endl;
+        return false;
     }
     _window = SDL_CreateWindow(_title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, _width, _height, 0);
 

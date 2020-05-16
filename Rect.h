@@ -14,7 +14,7 @@ class Rect
         ~Rect();
         void draw() const;
         void pollEventsCharacter(SDL_Event &event);
-        void update() ;
+        void update(int &score) ;
         bool check_collision(const Rect& B);
         void explode(const Rect &B);
         void menuEvents(SDL_Event &event, bool &is_play);

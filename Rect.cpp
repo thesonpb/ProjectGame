@@ -53,16 +53,18 @@ void Rect::pollEventsCharacter(SDL_Event &event)
         {
             case SDLK_LEFT:
                 _x-=20;
+                if(_x <= 0) _x = 0;
                 break;
             case SDLK_RIGHT:
                 _x+=20;
+                if(_x >= 800) _x = 800;
                 break;
             default:
                 break;
         }
     }
 }
-void Rect::update()
+void Rect::update(int & score)
 {
 
     if(isFalling)
@@ -72,7 +74,7 @@ void Rect::update()
     SDL_Delay(3);
     if(_y >= 600)
     {
-
+        score ++;
         _y = 0;
         _x = rand() % 800;
     }

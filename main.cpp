@@ -5,6 +5,8 @@
 #include "Rect.h"
 #include <ctime>
 #include <SDL_mixer.h>
+#include <string>
+#include "Text.h"
 
 
 using namespace std;
@@ -38,8 +40,11 @@ int main(int argc, char* argv[])
 {
     srand(time(NULL));
 
+    int score = 0;
+
     bool is_play = false;
     Window window("window", 800, 600);
+
 
     Rect menu(800, 600, 0, 0, "asset/menu.png");
         Rect player(70, 45, 100, 508, "asset/cat.png");
@@ -70,22 +75,22 @@ int main(int argc, char* argv[])
             player.draw();
 
             stone.draw();
-            stone.update();
+            stone.update(score);
 
             stone1.draw();
-            stone1.update();
+            stone1.update(score);
 
             stone2.draw();
-            stone2.update();
+            stone2.update(score);
 
             stone3.draw();
-            stone3.update();
+            stone3.update(score);
 
             stone4.draw();
-            stone4.update();
+            stone4.update(score);
 
             stone5.draw();
-            stone5.update();
+            stone5.update(score);
             window.clear();
             if(player.check_collision(stone)) {
                 explosion.explode(stone);
@@ -192,10 +197,13 @@ int main(int argc, char* argv[])
         Rect explosion(150, 150, 600, 0, "asset/explosion.png");
         Rect gameover(800, 600, 0, 0, "asset/gameover.png");
 
+        Text text(Window::renderer, "asset/VNARIALH.ttf", 38, "Your score is: " + to_string(score), {255, 0, 0, 255});
+        score = 0;
         while(!window.isClosed()){
 
                 pollMenuEvents(window, gameover, is_play);
                 gameover.draw();
+                text.display(20, 20, Window::renderer);
                 window.clear();
                 if(is_play == true ){
                     break;
@@ -210,22 +218,22 @@ int main(int argc, char* argv[])
             player.draw();
 
             stone.draw();
-            stone.update();
+            stone.update(score);
 
             stone1.draw();
-            stone1.update();
+            stone1.update(score);
 
             stone2.draw();
-            stone2.update();
+            stone2.update(score);
 
             stone3.draw();
-            stone3.update();
+            stone3.update(score);
 
             stone4.draw();
-            stone4.update();
+            stone4.update(score);
 
             stone5.draw();
-            stone5.update();
+            stone5.update(score);
             window.clear();
             if(player.check_collision(stone)) {
                 explosion.explode(stone);
@@ -318,8 +326,6 @@ int main(int argc, char* argv[])
 
             }
         }
-        cout << "\nvong while chinh ";
-
     }
 
     return 0;
