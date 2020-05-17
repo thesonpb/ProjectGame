@@ -6,8 +6,6 @@
 #include <ctime>
 #include <string>
 #include "Text.h"
-#include <SDL_mixer.h>
-
 
 using namespace std;
 
