@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1589596881 source:d:\the son\bigproject\main.cpp
+1589688852 source:d:\the son\bigproject\main.cpp
 	<iostream>
 	<SDL.h>
 	"window.h"
 	<SDL_image.h>
 	"Rect.h"
 	<ctime>
-	<SDL_mixer.h>
 	<string>
 	"Text.h"
+	<SDL_mixer.h>
 
 1589369130 d:\the son\bigproject\window.h
 	<iostream>
@@ -16,14 +16,15 @@
 	<string>
 	<SDL_image.h>
 
-1589593763 source:d:\the son\bigproject\window.cpp
+1589688868 source:d:\the son\bigproject\window.cpp
 	"window.h"
 	<iostream>
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>
+	<SDL_mixer.h>
 
-1589592739 source:d:\the son\bigproject\rect.cpp
+1589598256 source:d:\the son\bigproject\rect.cpp
 	"Rect.h"
 	<SDL_image.h>
 	<iostream>

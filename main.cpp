@@ -4,9 +4,9 @@
 #include <SDL_image.h>
 #include "Rect.h"
 #include <ctime>
-#include <SDL_mixer.h>
 #include <string>
 #include "Text.h"
+#include <SDL_mixer.h>
 
 
 using namespace std;
@@ -44,7 +44,6 @@ int main(int argc, char* argv[])
 
     bool is_play = false;
     Window window("window", 800, 600);
-
 
     Rect menu(800, 600, 0, 0, "asset/menu.png");
         Rect player(70, 45, 100, 508, "asset/cat.png");
@@ -203,7 +202,7 @@ int main(int argc, char* argv[])
 
                 pollMenuEvents(window, gameover, is_play);
                 gameover.draw();
-                text.display(20, 20, Window::renderer);
+                text.display(200, 205, Window::renderer);
                 window.clear();
                 if(is_play == true ){
                     break;
