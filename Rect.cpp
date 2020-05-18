@@ -7,11 +7,6 @@ using namespace std;
 
 SDL_Renderer *Window::renderer = nullptr;
 
-Rect::Rect(int w, int h, int x, int y, int r, int g, int b, int a):
-_w(w), _h(h), _x(x), _y(y), _r(r), _g(g), _b(b), _a(a)
-{
-
-}
 Rect::Rect(int w, int h, int x, int y, const string &image_path):
 _w(w), _h(h), _x(x), _y(y)
 {
@@ -41,7 +36,6 @@ void Rect::draw() const
     }
     else
     {
-    SDL_SetRenderDrawColor(Window::renderer, _r, _g, _b, _a);
     SDL_RenderFillRect(Window::renderer, &rect);
     }
 }
@@ -57,7 +51,7 @@ void Rect::pollEventsCharacter(SDL_Event &event)
                 break;
             case SDLK_RIGHT:
                 _x+=20;
-                if(_x >= 800) _x = 800;
+                if(_x >= 800-70) _x = 800-70;
                 break;
             default:
                 break;
@@ -66,7 +60,6 @@ void Rect::pollEventsCharacter(SDL_Event &event)
 }
 void Rect::update(int & score)
 {
-
     if(isFalling)
     {
     if(vel < 5) vel = 5;
@@ -104,12 +97,6 @@ bool Rect::check_collision(const Rect & B)
     if( rightA <= leftB ){return false;}
     if( leftA >= rightB ){return false;}
     return true;
-}
-
-void Rect::explode(const Rect & B)
-{
-    _x = B._x + B._w - _w;
-    _y = B._y + B._h - _h;
 }
 
 void Rect::menuEvents(SDL_Event &event, bool &is_play)

@@ -28,12 +28,6 @@ void pollMenuEvents(Window &window, Rect &rect, bool &is_play)
     }
 }
 
-void playThisGame()
-{
-
-}
-// theem bien bool kiem tra xem gameover chua vao trong ham di chuyen nhan vat, neu game over thif ko di chuyen nua
-
 int main(int argc, char* argv[])
 {
     srand(time(NULL));
@@ -51,7 +45,6 @@ int main(int argc, char* argv[])
         Rect stone3(50, 50, 250, 0, "asset/stone.png");
         Rect stone4(50, 50, 700, 0, "asset/stone.png");
         Rect stone5(50, 50, 450, 0, "asset/stone.png");
-        Rect explosion(150, 150, 600, 0, "asset/explosion.png");
         Rect gameover(800, 600, 0, 0, "asset/gameover.png");
 
         while(!window.isClosed()){
@@ -90,9 +83,7 @@ int main(int argc, char* argv[])
             stone5.update(score);
             window.clear();
             if(player.check_collision(stone)) {
-                explosion.explode(stone);
-                explosion.draw();
-                SDL_Delay(200);
+
                 gameover.draw();
                 stone.isFalling = false;
                 stone1.isFalling = false;
@@ -105,9 +96,7 @@ int main(int argc, char* argv[])
 
             }
             if(player.check_collision(stone1)) {
-                explosion.explode(stone1);
-                explosion.draw();
-                SDL_Delay(200);
+
                 gameover.draw();
                 stone.isFalling = false;
                 stone1.isFalling = false;
@@ -120,9 +109,7 @@ int main(int argc, char* argv[])
 
             }
             if(player.check_collision(stone2)) {
-                explosion.explode(stone2);
-                explosion.draw();
-                SDL_Delay(200);
+
                 gameover.draw();
                 stone.isFalling = false;
                 stone1.isFalling = false;
@@ -135,9 +122,7 @@ int main(int argc, char* argv[])
 
             }
             if(player.check_collision(stone3)) {
-                explosion.explode(stone3);
-                explosion.draw();
-                SDL_Delay(200);
+
                 gameover.draw();
                 stone.isFalling = false;
                 stone1.isFalling = false;
@@ -150,9 +135,7 @@ int main(int argc, char* argv[])
 
             }
             if(player.check_collision(stone4)) {
-                explosion.explode(stone4);
-                explosion.draw();
-                SDL_Delay(200);
+
                 gameover.draw();
                 stone.isFalling = false;
                 stone1.isFalling = false;
@@ -165,9 +148,7 @@ int main(int argc, char* argv[])
 
             }
             if(player.check_collision(stone5)) {
-                explosion.explode(stone5);
-                explosion.draw();
-                SDL_Delay(200);
+
                 gameover.draw();
                 stone.isFalling = false;
                 stone1.isFalling = false;
@@ -191,7 +172,6 @@ int main(int argc, char* argv[])
         Rect stone3(50, 50, 250, 0, "asset/stone.png");
         Rect stone4(50, 50, 700, 0, "asset/stone.png");
         Rect stone5(50, 50, 450, 0, "asset/stone.png");
-        Rect explosion(150, 150, 600, 0, "asset/explosion.png");
         Rect gameover(800, 600, 0, 0, "asset/gameover.png");
 
         Text text(Window::renderer, "asset/VNARIALH.ttf", 38, "Your score is: " + to_string(score), {255, 0, 0, 255});
@@ -233,9 +213,7 @@ int main(int argc, char* argv[])
             stone5.update(score);
             window.clear();
             if(player.check_collision(stone)) {
-                explosion.explode(stone);
-                explosion.draw();
-                SDL_Delay(200);
+
                 gameover.draw();
                 stone.isFalling = false;
                 stone1.isFalling = false;
@@ -248,9 +226,7 @@ int main(int argc, char* argv[])
 
             }
             if(player.check_collision(stone1)) {
-                explosion.explode(stone1);
-                explosion.draw();
-                SDL_Delay(200);
+
                 gameover.draw();
                 stone.isFalling = false;
                 stone1.isFalling = false;
@@ -263,9 +239,7 @@ int main(int argc, char* argv[])
 
             }
             if(player.check_collision(stone2)) {
-                explosion.explode(stone2);
-                explosion.draw();
-                SDL_Delay(200);
+
                 gameover.draw();
                 stone.isFalling = false;
                 stone1.isFalling = false;
@@ -278,9 +252,7 @@ int main(int argc, char* argv[])
 
             }
             if(player.check_collision(stone3)) {
-                explosion.explode(stone3);
-                explosion.draw();
-                SDL_Delay(200);
+
                 gameover.draw();
                 stone.isFalling = false;
                 stone1.isFalling = false;
@@ -293,9 +265,7 @@ int main(int argc, char* argv[])
 
             }
             if(player.check_collision(stone4)) {
-                explosion.explode(stone4);
-                explosion.draw();
-                SDL_Delay(200);
+
                 gameover.draw();
                 stone.isFalling = false;
                 stone1.isFalling = false;
@@ -308,9 +278,7 @@ int main(int argc, char* argv[])
 
             }
             if(player.check_collision(stone5)) {
-                explosion.explode(stone5);
-                explosion.draw();
-                SDL_Delay(200);
+
                 gameover.draw();
                 stone.isFalling = false;
                 stone1.isFalling = false;

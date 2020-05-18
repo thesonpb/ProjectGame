@@ -54,8 +54,6 @@ bool Window::init()
         return false;
     }
     img = IMG_LoadTexture(renderer, "asset/background.png");
-    //background = IMG_Load("green.png");
-
 
     return true;
 }
