@@ -22,7 +22,7 @@
 	<SDL_image.h>
 	<SDL_ttf.h>
 
-1589809346 source:d:\the son\bigproject\rect.cpp
+1589810056 source:d:\the son\bigproject\rect.cpp
 	"Rect.h"
 	<SDL_image.h>
 	<iostream>
