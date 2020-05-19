@@ -60,8 +60,6 @@ void Rect::pollEventsCharacter(SDL_Event &event)
 }
 void Rect::update(int & score)
 {
-    if(isFalling)
-    {
     if(vel < 5) vel = 5;
     _y+=vel;
     SDL_Delay(3);
@@ -72,7 +70,7 @@ void Rect::update(int & score)
         _x = rand() % 800;
     }
     if(_x>=800) _x -= 800;
-    }
+
 }
 
 bool Rect::check_collision(const Rect & B)

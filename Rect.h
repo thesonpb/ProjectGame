@@ -16,7 +16,6 @@ class Rect
         void update(int &score) ;
         bool check_collision(const Rect& B);
         void menuEvents(SDL_Event &event, bool &is_play);
-        bool isFalling = true;
         int vel = rand() % 10 +2;
     private:
         int _w, _h;

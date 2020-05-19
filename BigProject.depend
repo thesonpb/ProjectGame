@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1589809398 source:d:\the son\bigproject\main.cpp
+1589894339 source:d:\the son\bigproject\main.cpp
 	<iostream>
 	<SDL.h>
 	"window.h"
@@ -22,13 +22,13 @@
 	<SDL_image.h>
 	<SDL_ttf.h>
 
-1589810056 source:d:\the son\bigproject\rect.cpp
+1589894032 source:d:\the son\bigproject\rect.cpp
 	"Rect.h"
 	<SDL_image.h>
 	<iostream>
 	<ctime>
 
-1589809710 d:\the son\bigproject\rect.h
+1589894032 d:\the son\bigproject\rect.h
 	"window.h"
 	<string>
 

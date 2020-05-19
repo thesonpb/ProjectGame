@@ -33,6 +33,7 @@ int main(int argc, char* argv[])
     srand(time(NULL));
 
     int score = 0;
+    int highScore = 0;
 
     bool is_play = false;
     Window window("window", 800, 600);
@@ -85,78 +86,36 @@ int main(int argc, char* argv[])
             if(player.check_collision(stone)) {
 
                 gameover.draw();
-                stone.isFalling = false;
-                stone1.isFalling = false;
-                stone2.isFalling = false;
-                stone3.isFalling = false;
-                stone4.isFalling = false;
-                stone5.isFalling = false;
-
                 is_play = false;
 
             }
             if(player.check_collision(stone1)) {
 
                 gameover.draw();
-                stone.isFalling = false;
-                stone1.isFalling = false;
-                stone2.isFalling = false;
-                stone3.isFalling = false;
-                stone4.isFalling = false;
-                stone5.isFalling = false;
-
                 is_play = false;
 
             }
             if(player.check_collision(stone2)) {
 
                 gameover.draw();
-                stone.isFalling = false;
-                stone1.isFalling = false;
-                stone2.isFalling = false;
-                stone3.isFalling = false;
-                stone4.isFalling = false;
-                stone5.isFalling = false;
-
                 is_play = false;
 
             }
             if(player.check_collision(stone3)) {
 
                 gameover.draw();
-                stone.isFalling = false;
-                stone1.isFalling = false;
-                stone2.isFalling = false;
-                stone3.isFalling = false;
-                stone4.isFalling = false;
-                stone5.isFalling = false;
-
                 is_play = false;
 
             }
             if(player.check_collision(stone4)) {
 
                 gameover.draw();
-                stone.isFalling = false;
-                stone1.isFalling = false;
-                stone2.isFalling = false;
-                stone3.isFalling = false;
-                stone4.isFalling = false;
-                stone5.isFalling = false;
-
                 is_play = false;
 
             }
             if(player.check_collision(stone5)) {
 
                 gameover.draw();
-                stone.isFalling = false;
-                stone1.isFalling = false;
-                stone2.isFalling = false;
-                stone3.isFalling = false;
-                stone4.isFalling = false;
-                stone5.isFalling = false;
-
                 is_play = false;
 
             }
@@ -174,13 +133,16 @@ int main(int argc, char* argv[])
         Rect stone5(50, 50, 450, 0, "asset/stone.png");
         Rect gameover(800, 600, 0, 0, "asset/gameover.png");
 
-        Text text(Window::renderer, "asset/VNARIALH.ttf", 38, "Your score is: " + to_string(score), {255, 0, 0, 255});
+        Text scoreText(Window::renderer, "asset/VNARIALH.ttf", 38, "Your score is: " + to_string(score), {255, 0, 0, 255});
+        if(score > highScore) highScore = score;
+        Text highScoreText(Window::renderer, "asset/VNARIALH.ttf", 38, "Highest score: " + to_string(highScore), {255, 0, 0, 255});
         score = 0;
         while(!window.isClosed()){
 
                 pollMenuEvents(window, gameover, is_play);
                 gameover.draw();
-                text.display(200, 205, Window::renderer);
+                scoreText.display(200, 205, Window::renderer);
+                highScoreText.display(200, 50, Window::renderer);
                 window.clear();
                 if(is_play == true ){
                     break;
@@ -215,78 +177,36 @@ int main(int argc, char* argv[])
             if(player.check_collision(stone)) {
 
                 gameover.draw();
-                stone.isFalling = false;
-                stone1.isFalling = false;
-                stone2.isFalling = false;
-                stone3.isFalling = false;
-                stone4.isFalling = false;
-                stone5.isFalling = false;
-
                 is_play = false;
 
             }
             if(player.check_collision(stone1)) {
 
                 gameover.draw();
-                stone.isFalling = false;
-                stone1.isFalling = false;
-                stone2.isFalling = false;
-                stone3.isFalling = false;
-                stone4.isFalling = false;
-                stone5.isFalling = false;
-
                 is_play = false;
 
             }
             if(player.check_collision(stone2)) {
 
                 gameover.draw();
-                stone.isFalling = false;
-                stone1.isFalling = false;
-                stone2.isFalling = false;
-                stone3.isFalling = false;
-                stone4.isFalling = false;
-                stone5.isFalling = false;
-
                 is_play = false;
 
             }
             if(player.check_collision(stone3)) {
 
                 gameover.draw();
-                stone.isFalling = false;
-                stone1.isFalling = false;
-                stone2.isFalling = false;
-                stone3.isFalling = false;
-                stone4.isFalling = false;
-                stone5.isFalling = false;
-
                 is_play = false;
 
             }
             if(player.check_collision(stone4)) {
 
                 gameover.draw();
-                stone.isFalling = false;
-                stone1.isFalling = false;
-                stone2.isFalling = false;
-                stone3.isFalling = false;
-                stone4.isFalling = false;
-                stone5.isFalling = false;
-
                 is_play = false;
 
             }
             if(player.check_collision(stone5)) {
 
                 gameover.draw();
-                stone.isFalling = false;
-                stone1.isFalling = false;
-                stone2.isFalling = false;
-                stone3.isFalling = false;
-                stone4.isFalling = false;
-                stone5.isFalling = false;
-
                 is_play = false;
 
             }
